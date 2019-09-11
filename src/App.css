@@ -1,3 +1,10 @@
+:root {
+  --window-size: 20vmin;
+  --room-height: 70vh;
+  --room-width: 95vw;
+  background-color: #132626;
+}
+
 .App {
   text-align: center;
 }
@@ -21,6 +28,68 @@
 
 .App-link {
   color: #61dafb;
+}
+.room {
+  height: var(--room-height);
+  width: var(--room-width);
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.floor {
+  background-color: #dfd8c8;
+  width: calc(var(--room-width) - var(--window-size));
+  height: calc(--room-height - var(--window-size));
+  border-bottom: 5px solid slategrey;
+  border-right: 5px solid slategrey;
+}
+
+.flex {
+  display: flex;
+}
+
+.horizontal-windows {
+  display: flex;
+  height: var(--window-size);
+  width: var(--room-width);
+  justify-content: space-between;
+}
+
+.vertical-windows {
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--room-height) - var(--window-size));
+  width: var(--window-size);
+  justify-content: space-between;
+}
+
+.settings {
+  width: var(--room-width);
+  height: calc(100vh - var(--room-height));
+  margin: 0 auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.window {
+  width: var(--window-size);
+  height: var(--window-size);
+  border: solid 1px lightgrey;
+}
+
+.open {
+  background-color: #feda6a;
+}
+
+.closed {
+  background-color: #393f4d;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 @keyframes App-logo-spin {
