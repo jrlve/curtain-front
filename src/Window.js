@@ -64,5 +64,3 @@ export function WindowContainer(props) {
     }
     return <VerticallWindowContainer/>
 }
-
-// this.props.orientation === 'horizontal' ? "horizontal-windows": "vertical-windows"
