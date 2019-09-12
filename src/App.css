@@ -1,6 +1,6 @@
 :root {
-  --window-size: 20vmin;
-  --room-height: 70vh;
+  --window-size: calc(20vmin - 10px);
+  --room-height: 80vh;
   --room-width: 95vw;
   background-color: #132626;
 }
@@ -34,9 +34,9 @@
   width: var(--room-width);
   margin: 0 auto;
   background-color: whitesmoke;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid #d8ab4e;
+  border-left: 1px solid #d8ab4e;
+  border-right: 1px solid #d8ab4e;
 }
 
 .floor {
@@ -49,6 +49,14 @@
 
 .flex {
   display: flex;
+}
+
+.room-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .horizontal-windows {
@@ -67,17 +75,45 @@
 }
 
 .settings {
-  width: var(--room-width);
-  height: calc(100vh - var(--room-height));
-  margin: 0 auto;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90vmin;
+  height: 100vh;
+  border-left: 1px solid #d8ab4e;
+  border-right: 1px solid #d8ab4e;
+  background-color: whitesmoke;
+}
+
+.closed-settings {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #feda6a;
+  border: solid 1px #d8ab4e;
+  outline:none;
+  cursor: pointer;
+}
+
+.close-settings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.close-settings:hover {
+  color: grey;
 }
 
 .window {
   width: var(--window-size);
   height: var(--window-size);
   border: solid 1px lightgrey;
+  outline:none;
 }
 
 .open {

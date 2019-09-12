@@ -1,7 +1,6 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 
-export class Window extends React.Component {
+class Window extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
